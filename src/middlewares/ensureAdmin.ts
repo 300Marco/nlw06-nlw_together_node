@@ -10,8 +10,6 @@ export async function ensureAdmin(request: Request, response: Response, next: Ne
     const { admin } = await usersRepositories.findOne(user_id);
         
     // Verificar se usuário admin
-    const admin = true;
-
     if(admin) {
         return next();
     }
